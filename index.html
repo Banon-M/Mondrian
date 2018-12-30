@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title></title>
+</head>
+
+<body>
+  <section class="container">
+    <div class="row"> <!-- Première ligne  -->
+      <div class="square bg-white" id="l1Square1" ></div>
+      <div class="square bg-yellow" id="l1Square2"></div>
+      <div class="square bg-red" id="l1Square3"></div>
+      <div class="square bg-blue" id="l1Square4"></div>
+    </div>
+
+    <div class="row"><!-- Deuxième ligne  -->
+      <div class="square bg-white" id="l2Square1"></div>
+      <div class="square bg-white" id="l2Square2"></div>
+      <div class="square bg-white" id="l2Square3"></div>
+      <div class="square bg-white" id="l2Square4"></div>
+      <div class="square bg-red" id="l2Square5" ></div>
+    </div>
+
+    <div class="row"><!-- Troisième ligne  -->
+      <div class="squareLeft bg-white" id="l3Square1"></div> <!--Premier carré de gauche -->
+      <div class="squareRight"><!--élément de droite compposé de deux lignes et 3 carrés par ligne-->
+        <!-- création de la ligne du haut -->
+        <div class="rowTop">
+          <div class="square bg-white" id="l3TopSquare1"></div>
+          <div  class="square bg-blue" id="l3TopSquare2"></div>
+          <div class="square bg-white" id="l3TopSquare3"></div>
+        </div>
+        <!-- création de la ligne du bas  -->
+        <div class="rowBottom">
+          <div class="square bg-red" id="l3BottomSquare1"></div>
+          <div class="square bg-yellow" id="l3BottomSquare2"></div>
+          <div class="square bg-white" id="l3BottomSquare3"></div>
+        </div>
+      </div>
+   </div>
+  </section>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

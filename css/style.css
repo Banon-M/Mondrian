@@ -1,0 +1,157 @@
+/* Mise en page general */
+
+.container {
+  height: 600px;
+  width: 600px;
+} /* Taille du container principal */
+
+.row {
+  border-bottom: 6px solid black;
+  height: 200px;
+  display: flex;
+}/* Mise en place des 3 lignes général */
+
+.square {
+  border: 6px solid black;
+  border-bottom: none;
+}/* Mise en page des cubes- Bordure de 6px- sans aucune bordur */
+
+
+/* couleur de fond des cubes coloré */
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-white{
+  background-color: white;
+}
+
+
+/*  DEBUT Ligne 1 */
+
+.container .row:nth-child(1) .square{
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.container .row:nth-child(1) .square:nth-child(1) {
+  width: 20px;
+  border-left: none;
+}
+
+.container .row:nth-child(1) .square:nth-child(2) {
+  width: 100px;
+}
+
+.container .row:nth-child(1) .square:nth-child(3) {
+  width: 210px;
+}
+
+.container .row:nth-child(1) .square:nth-child(4) {
+  width: 260px;
+}
+
+/* FIN Ligne 1 */
+
+/* DEBUT ligne 2 */
+.container .row:nth-child(2) .square:nth-child(1) {
+  width: 20px;
+  border-left: none;
+}
+
+.container .row:nth-child(2) .square:nth-child(2) {
+  width: 96px;
+}
+
+.container .row:nth-child(2) .square:nth-child(3) {
+  width: 203px;
+}
+
+.container .row:nth-child(2) .square:nth-child(4) {
+  width: 100px;
+}
+
+.container .row:nth-child(2) .square:nth-child(5) {
+  width: 140px;
+}
+
+/* FIN Ligne 2 */
+
+/* DEBUT ligne 3 */
+.container .row:nth-child(3) {
+  border-bottom: none;
+  border-top: 6px solid black;
+}
+
+.container .row:nth-child(3) .squareLeft {
+  width: 20px;
+  border: none;
+  border-right: 6px solid black;
+}/* Cube de gauche  */
+
+
+.container .row:nth-child(3) .squareRight {
+  display: flex;
+  flex-direction: column;
+  width: 562px;
+  height: 200px;
+  border: none;
+} /*Cube de droite  (en display flex- direction column pour que ses 2 enfants ("rowTop" et "rowBottom") soient positionnés en colone")*/
+
+.rowTop {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 580px;
+} /*LIGNE DU DESSUS; paramétré en flex/row pour que les cubes "square" soient positionnés en ligne.*/
+
+.rowTop .square:nth-child(1) {
+  width: 92px;
+  border-top: none;
+}
+
+.rowTop .square:nth-child(2) {
+  width: 309px;
+  border-top: none;
+}
+
+.rowTop .square:nth-child(3) {
+  width: 137px;
+  border-top: none;
+}
+
+.rowBottom {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 574px;
+  border-top: 6px solid black;
+}/*LIGNE DU DESSOUS; paramétré en flex/row pour que les cubes "square" soient positionnés en ligne.*/
+
+.rowBottom .square:nth-child(1) {
+  width: 92px;
+  border-bottom: none;
+}
+
+.rowBottom .square:nth-child(2) {
+  width: 309px;
+  border-bottom: none;
+}
+
+.rowBottom .square:nth-child(3) {
+  width: 143px;
+  border-bottom: none;
+  border-right: none;
+}
+
+
+/*ATTENTION La taille des éléments n'est pas forcément égal à la taille du containeur. Les éléments possèdent des marges qui sont pris en compte
+dans le calcul de la largeur de chaque élément. */
